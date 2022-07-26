@@ -1,0 +1,97 @@
+main {
+  margin-top: 60px;
+}
+
+.info-adocao img {
+  max-width: 362px;
+  border-radius: 6px;
+}
+
+.info-adocao .container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  place-items: center;
+}
+
+.pq-adotar-info h2 {
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  line-height: 38.4px;
+  margin-bottom: 10px;
+}
+
+.pq-adotar-info h2::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-color: #F20544;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.pq-adotar-info p {
+  font-size: 1rem;
+  line-height: 28px;
+  color: #626262;
+}
+
+.pq-adotar-info p+p {
+  margin-top: 10px;
+}
+
+
+@media screen and (max-width:970px) {
+  .pq-adotar-info h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width:915px) {
+  .pq-adotar-info h2 {
+    font-size: 1.45rem;
+  }
+
+
+}
+
+@media screen and (max-width:850px) {
+  .pq-adotar-info h2 {
+    font-size: 1.15rem;
+  }
+
+  .info-adocao .container {
+    place-items: start;
+  }
+}
+
+@media screen and (max-width:780px) {
+  .pq-adotar-info h2 {
+    font-size: 1.15rem;
+  }
+
+  .info-adocao .container {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
+  .info-adocao .container img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+
+    margin-bottom: 60px;
+  }
+
+  .info-adocao .container img::before {
+    content: "aaaaaaaaa";
+    display: block;
+    color: #F20544;
+    position: relative;
+    left: 300px;
+
+  }
+}

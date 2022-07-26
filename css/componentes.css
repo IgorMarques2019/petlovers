@@ -1,0 +1,24 @@
+.btn-p,
+.btn-s {
+  padding: 10px 16px;
+  border-radius: 4px;
+}
+
+.btn-p {
+  background-color: #F20544;
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-p:hover {
+  background-color: #ba0737;
+}
+
+hr {
+  border:none;
+  height:1px;
+  max-width:250px;
+  background-color: #c8c8c8;
+  margin:60px auto;
+}
