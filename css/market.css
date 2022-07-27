@@ -1,0 +1,175 @@
+
+.promo-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px;
+  overflow: scroll;
+  padding: 20px;
+}
+
+.promo-container::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.promo-area .promo-head {
+  display: flex;
+  place-items: center;
+  place-content: space-between;
+}
+
+.promo-area .promo-head h2 {
+  font-weight: 600;
+  color: #1B1725;
+}
+
+.promo-area .promo-head a {
+  color: #226CE0;
+}
+
+.card-promo {
+  max-width: 200px;
+  width: 100%;
+  padding: 20px;
+  background: white;
+  box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.1);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  position: relative;
+  overflow: hidden;
+  flex: content;
+
+  flex-shrink: 0;
+}
+
+.card-promo img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.card-promo .prod-info {
+  margin-top: 20px;
+}
+
+.card-promo .prod-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  /* color:#F20544; */
+  color: #1B1725;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.price {
+  top: 0;
+  right: 0;
+  position: absolute;
+  background-color: #F20544;
+  padding: 10px;
+  color: white;
+  width: 40%;
+  text-align: center;
+  border-bottom-left-radius: 40px;
+  font-size: 12px;
+
+}
+
+.verMaisOn {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(200px, 360px));
+  place-content: center;
+  place-items: center;
+
+}
+
+.verMaisOn .price {
+  width: max-content;
+  border-bottom-left-radius: 6px;
+
+}
+
+.verMaisOn .card-promo {
+  transition: 0.5s ease-in;
+}
+
+
+@media screen and (max-width:1120px) {
+  .verMaisOn {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 360px));
+    place-content: center;
+    place-items: center;
+  }
+}
+
+@media screen and (max-width:894px) {
+  .verMaisOn {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    place-content: center;
+    place-items: center;
+  }
+}
+
+@media screen and (max-width:780px) {
+  .verMaisOn {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    place-content: center;
+    place-items: center;
+  }
+}
+
+@media screen and (max-width:594px) {
+  .verMaisOn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    place-items: center;
+  }
+}
+
+@media screen and (max-width:415px) {
+  .verMaisOn {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    place-items: center;
+  }
+
+  .verMaisOn .card-promo {
+    max-width: 100%;
+    width: 100%;
+    padding: 5px;
+  }
+
+
+  .verMaisOn .card-promo a {
+    display: flex;
+   justify-content:start;
+    gap: 10px;
+  }
+
+  .verMaisOn .prod-info,
+  .verMaisOn .prod-info h3 {
+    padding: 0;
+    font-size:12px;
+  }
+
+  .verMaisOn .card-promo a img {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width:590px) {
+  .promo-head>h2 {
+    font-size: 1rem;
+  }
+
+  .pets-head>a {
+    font-size: 14px;
+  }
+}

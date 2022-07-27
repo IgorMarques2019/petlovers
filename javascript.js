@@ -18,6 +18,7 @@ function menutoggle() {
   navlinks.forEach((item) => {
     item.addEventListener('click', () => {
       navHeader.classList.toggle('ativo')
+      document.body.classList.toggle('over-hidden')
       if (navHeader.classList.contains('ativo')) {
         menuIcon.setAttribute('src', './img/menu-open.png')
       } else {
@@ -33,19 +34,17 @@ function horarioFuncionamento() {
   const pr = document.querySelector('.atendimento p:nth-child(1)')
   let dataAtual = new Date()
 
-  setInterval(() => {
-    let hora = dataAtual.getHours()
 
-    if (hora >= 8 && hora <= 16) {
-      pr.classList.add('open')
-      spanHr.innerHTML = "abertos"
-    } else {
-      pr.classList.remove('open')
-      spanHr.innerHTML = "fechados"
-    }
-  }, 1000);
+  let hora = dataAtual.getHours()
+
+  if (hora >= 8 && hora <= 16) {
+    pr.classList.add('open')
+    spanHr.innerHTML = "abertos"
+  } else {
+    pr.classList.remove('open')
+    spanHr.innerHTML = "fechados"
+  }
 }
-
 horarioFuncionamento()
 
 
@@ -91,3 +90,38 @@ function cardLikePost() {
   }
 }
 cardLikePost()
+
+
+
+
+
+function expandSection() {
+  const sectionPromo = document.querySelector('.promo-container')
+  const verMaisItem = document.querySelector('.promo-head a')
+
+
+
+  function verMaiss(evt) {
+    evt.preventDefault()
+
+    let fecharSection = "Fechar &gt";
+    sectionPromo.classList.toggle('verMaisOn');
+  
+
+    if (verMaisItem.innerHTML == "Expandir") {
+      verMaisItem.innerHTML = fecharSection
+    }else {
+      verMaisItem.innerHTML = "Expandir"
+    }
+
+
+
+
+
+
+
+
+  }
+  verMaisItem.addEventListener('click', verMaiss)
+}
+expandSection()

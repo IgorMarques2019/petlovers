@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://img.icons8.com/pastel-glyph/64/000000/dog-jump--v2.png" type="image/png">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+
+    body {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background: #F20544 radial-gradient(#ff225d, #c30538);
+
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      place-items:center;
+      padding:40px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .error-info {
+      color:white;
+    }
+
+    @media screen and (max-width:540px) {
+      body {
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
+  <title>Erro</title>
+</head>
+
+<body>
+  <div class="error-info">
+    <h1>Erro :(</h1>
+    <p>Parece que o item que está procurando não existe mais</p>
+  </div>
+
+  <img src="../produtos/error-cat.png">
+</body>
+
+</html>
